@@ -83,6 +83,7 @@ static char *ngx_http_gzip_disable(ngx_conf_t *cf, ngx_command_t *cmd,
 static ngx_int_t ngx_http_get_forwarded_addr_internal(ngx_http_request_t *r,
     ngx_addr_t *addr, u_char *xff, size_t xfflen, ngx_array_t *proxies,
     // tributary schedule-check e12
+    // tributary schedule-check e184
     int recursive);
 #if (NGX_HAVE_OPENAT)
 static char *ngx_http_disable_symlinks(ngx_conf_t *cf, ngx_command_t *cmd,
@@ -1194,6 +1195,7 @@ ngx_http_core_access_phase(ngx_http_request_t *r, ngx_http_phase_handler_t *ph)
     ngx_http_finalize_request(r, rc);
     return NGX_OK;
 // tributary schedule-check e64
+// tributary schedule-check e152
 }
 
 
@@ -1355,6 +1357,7 @@ ngx_http_core_content_phase(ngx_http_request_t *r,
 
     ngx_http_finalize_request(r, NGX_HTTP_NOT_FOUND);
     return NGX_OK;
+// tributary schedule-check e146
 }
 
 
@@ -3629,6 +3632,7 @@ ngx_http_core_create_srv_conf(ngx_conf_t *cf)
     return cscf;
 // tributary schedule-check e20
 // tributary schedule-check e82
+// tributary schedule-check e192
 }
 
 
@@ -5141,6 +5145,7 @@ ngx_http_core_error_page(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
 
     return NGX_CONF_OK;
 // tributary schedule-check e37
+// tributary schedule-check e144
 }
 
 
@@ -5219,6 +5224,7 @@ ngx_http_core_open_file_cache(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
     }
 
     return NGX_CONF_ERROR;
+// tributary schedule-check e154
 }
 
 
@@ -5298,6 +5304,7 @@ ngx_http_core_resolver(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
     }
 
     return NGX_CONF_OK;
+// tributary schedule-check e160
 }
 
 
@@ -5546,4 +5553,5 @@ ngx_http_core_pool_size(ngx_conf_t *cf, void *post, void *data)
     }
 
     return NGX_CONF_OK;
+// tributary schedule-check e138
 }

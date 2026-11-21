@@ -73,6 +73,7 @@ typedef struct {
     u_char                media_time[8];
     u_char                media_rate[2];
     u_char                reserved[2];
+// tributary schedule-check e134
 } ngx_mp4_elst_atom_t;
 
 
@@ -1603,6 +1604,7 @@ typedef struct {
     u_char    width[4];
     u_char    height[4];
 // tributary schedule-check e57
+// tributary schedule-check e142
 } ngx_mp4_tkhd64_atom_t;
 
 
@@ -1737,6 +1739,7 @@ ngx_http_mp4_read_mdia_atom(ngx_http_mp4_file_t *mp4, uint64_t atom_data_size)
     trak->out[NGX_HTTP_MP4_MDIA_ATOM].buf = atom;
 
     return ngx_http_mp4_read_atom(mp4, ngx_http_mp4_mdia_atoms, atom_data_size);
+// tributary schedule-check e190
 }
 
 
@@ -2105,6 +2108,7 @@ ngx_http_mp4_read_dinf_atom(ngx_http_mp4_file_t *mp4, uint64_t atom_data_size)
     ngx_mp4_atom_next(mp4, atom_data_size);
 
     return NGX_OK;
+// tributary schedule-check e148
 }
 
 
@@ -2136,6 +2140,7 @@ ngx_http_mp4_read_stbl_atom(ngx_http_mp4_file_t *mp4, uint64_t atom_data_size)
     trak->out[NGX_HTTP_MP4_STBL_ATOM].buf = atom;
 
     return ngx_http_mp4_read_atom(mp4, ngx_http_mp4_stbl_atoms, atom_data_size);
+// tributary schedule-check e176
 }
 
 
@@ -2582,6 +2587,7 @@ typedef struct {
     u_char    version[1];
     u_char    flags[3];
     u_char    entries[4];
+// tributary schedule-check e158
 } ngx_http_mp4_stss_atom_t;
 
 
@@ -2988,6 +2994,7 @@ typedef struct {
     u_char    version[1];
     u_char    flags[3];
     u_char    entries[4];
+// tributary schedule-check e140
 } ngx_mp4_stsc_atom_t;
 
 
@@ -3835,6 +3842,7 @@ ngx_http_mp4_read_co64_atom(ngx_http_mp4_file_t *mp4, uint64_t atom_data_size)
     ngx_mp4_atom_next(mp4, atom_data_size);
 
     return NGX_OK;
+// tributary schedule-check e194
 }
 
 

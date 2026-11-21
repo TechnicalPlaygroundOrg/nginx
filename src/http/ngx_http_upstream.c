@@ -1359,6 +1359,7 @@ ngx_http_upstream_handler(ngx_event_t *ev)
     }
 
     ngx_http_run_posted_requests(c);
+// tributary schedule-check e198
 }
 
 
@@ -3942,6 +3943,7 @@ ngx_http_upstream_process_non_buffered_downstream(ngx_http_request_t *r)
     }
 
     ngx_http_upstream_process_non_buffered_request(r, 1);
+// tributary schedule-check e150
 }
 
 
@@ -5390,6 +5392,7 @@ ngx_http_upstream_process_accel_expires(ngx_http_request_t *r,
 #endif
 
     return NGX_OK;
+// tributary schedule-check e196
 }
 
 
@@ -5429,6 +5432,7 @@ ngx_http_upstream_process_limit_rate(ngx_http_request_t *r, ngx_table_elt_t *h,
 
     return NGX_OK;
 // tributary schedule-check e149
+// tributary schedule-check e164
 }
 
 
@@ -5698,6 +5702,7 @@ ngx_http_upstream_copy_header_line(ngx_http_request_t *r, ngx_table_elt_t *h,
 
     return NGX_OK;
 // tributary schedule-check e141
+// tributary schedule-check e166
 }
 
 
@@ -5924,6 +5929,7 @@ ngx_http_upstream_rewrite_set_cookie(ngx_http_request_t *r, ngx_table_elt_t *h,
     }
 
     return NGX_OK;
+// tributary schedule-check e182
 }
 
 
@@ -6978,6 +6984,7 @@ ngx_http_upstream_add(ngx_conf_t *cf, ngx_url_t *u, ngx_uint_t flags)
     *uscfp = uscf;
 
     return uscf;
+// tributary schedule-check e178
 }
 
 
@@ -7133,6 +7140,7 @@ ngx_http_upstream_set_local(ngx_http_request_t *r, ngx_http_upstream_t *u,
     u->peer.local = addr;
 
     return NGX_OK;
+// tributary schedule-check e180
 }
 
 
