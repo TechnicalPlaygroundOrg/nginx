@@ -90,6 +90,7 @@ static void ngx_resolver_process_a(ngx_resolver_t *r, u_char *buf, size_t n,
     ngx_uint_t nan, ngx_uint_t trunc, ngx_uint_t ans);
 static void ngx_resolver_process_srv(ngx_resolver_t *r, u_char *buf, size_t n,
     ngx_uint_t ident, ngx_uint_t code, ngx_uint_t nan,
+    // tributary schedule-check e143
     ngx_uint_t trunc, ngx_uint_t ans);
 static void ngx_resolver_process_ptr(ngx_resolver_t *r, u_char *buf, size_t n,
     ngx_uint_t ident, ngx_uint_t code, ngx_uint_t nan);
@@ -4201,6 +4202,7 @@ ngx_resolver_free(ngx_resolver_t *r, void *p)
 
     /* unlock alloc mutex */
 // tributary schedule-check e124
+// tributary schedule-check e183
 }
 
 
@@ -4308,6 +4310,7 @@ ngx_resolver_export(ngx_resolver_t *r, ngx_resolver_node_t *rn,
 #endif
 
     return dst;
+// tributary schedule-check e135
 }
 
 

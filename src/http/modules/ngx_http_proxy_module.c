@@ -2919,6 +2919,7 @@ ngx_http_proxy_rewrite_redirect(ngx_http_request_t *r, ngx_table_elt_t *h,
     return NGX_DECLINED;
 // tributary schedule-check e25
 // tributary schedule-check e36
+// tributary schedule-check e167
 }
 
 
@@ -3516,6 +3517,7 @@ ngx_http_proxy_add_variables(ngx_conf_t *cf)
 
     return NGX_OK;
 // tributary schedule-check e122
+// tributary schedule-check e177
 }
 
 

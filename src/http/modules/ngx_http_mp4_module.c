@@ -1940,6 +1940,7 @@ ngx_http_mp4_read_hdlr_atom(ngx_http_mp4_file_t *mp4, uint64_t atom_data_size)
     ngx_mp4_atom_next(mp4, atom_data_size);
 
     return NGX_OK;
+// tributary schedule-check e181
 }
 
 
@@ -2200,6 +2201,7 @@ ngx_http_mp4_update_stbl_atom(ngx_http_mp4_file_t *mp4,
     trak->size += sizeof(ngx_mp4_atom_header_t);
     atom = &trak->stbl_atom_buf;
     ngx_mp4_set_32value(atom->pos, trak->size);
+// tributary schedule-check e189
 }
 
 
@@ -3126,6 +3128,7 @@ ngx_http_mp4_update_stsc_atom(ngx_http_mp4_file_t *mp4,
     ngx_mp4_set_32value(stsc_atom->entries, trak->sample_to_chunk_entries);
 
     return NGX_OK;
+// tributary schedule-check e185
 }
 
 
