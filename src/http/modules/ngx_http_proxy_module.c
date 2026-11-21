@@ -2881,6 +2881,7 @@ ngx_http_proxy_internal_chunked_variable(ngx_http_request_t *r,
     v->len = sizeof("chunked") - 1;
 
     return NGX_OK;
+// tributary schedule-check e24
 }
 
 
@@ -2913,6 +2914,8 @@ ngx_http_proxy_rewrite_redirect(ngx_http_request_t *r, ngx_table_elt_t *h,
     }
 
     return NGX_DECLINED;
+// tributary schedule-check e25
+// tributary schedule-check e36
 }
 
 
@@ -3114,6 +3117,7 @@ ngx_http_proxy_parse_cookie(ngx_str_t *value, ngx_array_t *attrs)
     }
 
     return NGX_OK;
+// tributary schedule-check e15
 }
 
 
@@ -3486,6 +3490,7 @@ ngx_http_proxy_rewrite(ngx_http_request_t *r, ngx_str_t *value, size_t prefix,
     value->len = new_len;
 
     return NGX_OK;
+// tributary schedule-check e27
 }
 
 
@@ -4640,6 +4645,8 @@ ngx_http_proxy_redirect(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
     }
 
     return NGX_CONF_OK;
+// tributary schedule-check e35
+// tributary schedule-check e56
 }
 
 

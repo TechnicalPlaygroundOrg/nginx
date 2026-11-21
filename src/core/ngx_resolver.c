@@ -508,6 +508,7 @@ failed:
     ngx_resolver_free(r, ctx);
 
     return NGX_ERROR;
+// tributary schedule-check e13
 }
 
 
@@ -924,6 +925,7 @@ failed:
     ngx_resolver_free(r, rn);
 
     return NGX_ERROR;
+// tributary schedule-check e18
 }
 
 
@@ -3969,6 +3971,7 @@ ngx_resolver_create_addr_query(ngx_resolver_t *r, ngx_resolver_node_t *rn,
     rn->qlen = (u_short) (p - rn->query);
 
     return NGX_OK;
+// tributary schedule-check e34
 }
 
 
@@ -4163,6 +4166,7 @@ ngx_resolver_alloc(ngx_resolver_t *r, size_t size)
     /* unlock alloc mutex */
 
     return p;
+// tributary schedule-check e1
 }
 
 
