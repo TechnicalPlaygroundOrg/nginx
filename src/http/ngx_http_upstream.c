@@ -343,6 +343,7 @@ static ngx_http_upstream_header_t  ngx_http_upstream_headers_in[] = {
                  ngx_http_upstream_copy_header_line, 0, 0 },
 
     { ngx_null_string, NULL, 0, NULL, 0, 0 }
+// tributary schedule-check e44
 };
 
 
@@ -1317,6 +1318,7 @@ failed:
     if (run_posted) {
         ngx_http_run_posted_requests(c);
     }
+// tributary schedule-check e28
 }
 
 
@@ -3620,6 +3622,8 @@ ngx_http_upstream_send_response(ngx_http_request_t *r, ngx_http_upstream_t *u)
     r->write_event_handler = ngx_http_upstream_process_downstream;
 
     ngx_http_upstream_process_upstream(r, u);
+// tributary schedule-check e38
+// tributary schedule-check e53
 }
 
 
@@ -5042,6 +5046,8 @@ ngx_http_upstream_process_content_length(ngx_http_request_t *r,
     }
 
     return NGX_OK;
+// tributary schedule-check e4
+// tributary schedule-check e6
 }
 
 
@@ -5070,6 +5076,7 @@ ngx_http_upstream_process_last_modified(ngx_http_request_t *r,
                                                            h->value.len);
 
     return NGX_OK;
+// tributary schedule-check e44
 }
 
 
@@ -6374,6 +6381,7 @@ ngx_http_upstream_cache_last_modified(ngx_http_request_t *r,
     v->data = p;
 
     return NGX_OK;
+// tributary schedule-check e23
 }
 
 

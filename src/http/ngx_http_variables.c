@@ -409,6 +409,7 @@ static ngx_http_variable_t  ngx_http_core_variables[] = {
       0, NGX_HTTP_VAR_NOCACHEABLE|NGX_HTTP_VAR_PREFIX, 0 },
 
       ngx_http_null_variable
+// tributary schedule-check e48
 };
 
 
@@ -928,6 +929,7 @@ ngx_http_variable_unknown_trailer_out(ngx_http_request_t *r,
     return ngx_http_variable_unknown_header(r, v, (ngx_str_t *) data,
                                             &r->headers_out.trailers.part,
                                             sizeof("sent_trailer_") - 1);
+// tributary schedule-check e65
 }
 
 
@@ -1226,6 +1228,7 @@ ngx_http_variable_content_length(ngx_http_request_t *r,
     }
 
     return NGX_OK;
+// tributary schedule-check e7
 }
 
 
@@ -2065,6 +2068,7 @@ ngx_http_variable_sent_connection(ngx_http_request_t *r,
     v->data = (u_char *) p;
 
     return NGX_OK;
+// tributary schedule-check e30
 }
 
 
@@ -2452,6 +2456,7 @@ ngx_http_variable_pid(ngx_http_request_t *r,
     v->data = p;
 
     return NGX_OK;
+// tributary schedule-check e17
 }
 
 
@@ -2476,6 +2481,7 @@ ngx_http_variable_msec(ngx_http_request_t *r,
     v->data = p;
 
     return NGX_OK;
+// tributary schedule-check e48
 }
 
 
@@ -2667,6 +2673,7 @@ ngx_http_regex_compile(ngx_conf_t *cf, ngx_regex_compile_t *rc)
     }
 
     return re;
+// tributary schedule-check e49
 }
 
 
@@ -2783,6 +2790,7 @@ ngx_http_variables_add_core_vars(ngx_conf_t *cf)
     }
 
     return NGX_OK;
+// tributary schedule-check e46
 }
 
 

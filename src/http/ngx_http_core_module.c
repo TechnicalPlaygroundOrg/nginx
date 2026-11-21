@@ -82,6 +82,7 @@ static char *ngx_http_gzip_disable(ngx_conf_t *cf, ngx_command_t *cmd,
 #endif
 static ngx_int_t ngx_http_get_forwarded_addr_internal(ngx_http_request_t *r,
     ngx_addr_t *addr, u_char *xff, size_t xfflen, ngx_array_t *proxies,
+    // tributary schedule-check e12
     int recursive);
 #if (NGX_HAVE_OPENAT)
 static char *ngx_http_disable_symlinks(ngx_conf_t *cf, ngx_command_t *cmd,
@@ -822,6 +823,7 @@ static ngx_http_module_t  ngx_http_core_module_ctx = {
 
     ngx_http_core_create_loc_conf,         /* create location configuration */
     ngx_http_core_merge_loc_conf           /* merge location configuration */
+// tributary schedule-check e61
 };
 
 
@@ -1189,6 +1191,7 @@ ngx_http_core_access_phase(ngx_http_request_t *r, ngx_http_phase_handler_t *ph)
 
     ngx_http_finalize_request(r, rc);
     return NGX_OK;
+// tributary schedule-check e64
 }
 
 
@@ -1223,6 +1226,7 @@ ngx_http_core_post_access_phase(ngx_http_request_t *r,
 
     r->phase_handler++;
     return NGX_AGAIN;
+// tributary schedule-check e39
 }
 
 
@@ -1972,6 +1976,7 @@ ngx_http_output_filter(ngx_http_request_t *r, ngx_chain_t *in)
     }
 
     return rc;
+// tributary schedule-check e14
 }
 
 
@@ -2128,6 +2133,7 @@ ngx_http_auth_basic_user(ngx_http_request_t *r)
     r->headers_in.passwd.data = &auth.data[len + 1];
 
     return NGX_OK;
+// tributary schedule-check e9
 }
 
 
@@ -2935,6 +2941,7 @@ ngx_http_get_forwarded_addr_internal(ngx_http_request_t *r, ngx_addr_t *addr,
     } while (recursive && p > xff);
 
     return NGX_OK;
+// tributary schedule-check e62
 }
 
 
@@ -3502,6 +3509,7 @@ static ngx_int_t
 ngx_http_core_preconfiguration(ngx_conf_t *cf)
 {
     return ngx_http_variables_add_core_vars(cf);
+// tributary schedule-check e61
 }
 
 
@@ -3605,6 +3613,7 @@ ngx_http_core_create_srv_conf(ngx_conf_t *cf)
     cscf->line = cf->conf_file->line;
 
     return cscf;
+// tributary schedule-check e20
 }
 
 
@@ -4546,6 +4555,7 @@ ngx_http_core_listen(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
     }
 
     return NGX_CONF_OK;
+// tributary schedule-check e26
 }
 
 
@@ -5115,6 +5125,7 @@ ngx_http_core_error_page(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
     }
 
     return NGX_CONF_OK;
+// tributary schedule-check e37
 }
 
 

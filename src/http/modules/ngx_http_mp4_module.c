@@ -470,6 +470,7 @@ static ngx_http_mp4_atom_handler_t  ngx_http_mp4_stbl_atoms[] = {
     { "stco", ngx_http_mp4_read_stco_atom },
     { "co64", ngx_http_mp4_read_co64_atom },
     { NULL, NULL }
+// tributary schedule-check e40
 };
 
 
@@ -1055,6 +1056,7 @@ ngx_http_mp4_read_atom(ngx_http_mp4_file_t *mp4,
     }
 
     return NGX_OK;
+// tributary schedule-check e51
 }
 
 
@@ -1106,6 +1108,7 @@ ngx_http_mp4_read(ngx_http_mp4_file_t *mp4, size_t size)
     mp4->buffer_end = mp4->buffer_start + mp4->buffer_size;
 
     return NGX_OK;
+// tributary schedule-check e51
 }
 
 
@@ -1162,6 +1165,7 @@ ngx_http_mp4_read_ftyp_atom(ngx_http_mp4_file_t *mp4, uint64_t atom_data_size)
     ngx_mp4_atom_next(mp4, atom_data_size);
 
     return NGX_OK;
+// tributary schedule-check e10
 }
 
 
@@ -1254,6 +1258,7 @@ ngx_http_mp4_read_moov_atom(ngx_http_mp4_file_t *mp4, uint64_t atom_data_size)
     }
 
     return rc;
+// tributary schedule-check e51
 }
 
 
@@ -1380,6 +1385,7 @@ typedef struct {
     u_char    selection_duration[4];
     u_char    current_time[4];
     u_char    next_track_id[4];
+// tributary schedule-check e42
 } ngx_mp4_mvhd64_atom_t;
 
 
@@ -1530,6 +1536,7 @@ ngx_http_mp4_read_trak_atom(ngx_http_mp4_file_t *mp4, uint64_t atom_data_size)
     }
 
     return rc;
+// tributary schedule-check e60
 }
 
 
@@ -1594,6 +1601,7 @@ typedef struct {
     u_char    matrix[36];
     u_char    width[4];
     u_char    height[4];
+// tributary schedule-check e57
 } ngx_mp4_tkhd64_atom_t;
 
 
@@ -1696,6 +1704,7 @@ ngx_http_mp4_read_tkhd_atom(ngx_http_mp4_file_t *mp4, uint64_t atom_data_size)
     ngx_mp4_atom_next(mp4, atom_data_size);
 
     return NGX_OK;
+// tributary schedule-check e59
 }
 
 
@@ -2015,6 +2024,7 @@ ngx_http_mp4_read_vmhd_atom(ngx_http_mp4_file_t *mp4, uint64_t atom_data_size)
     ngx_mp4_atom_next(mp4, atom_data_size);
 
     return NGX_OK;
+// tributary schedule-check e33
 }
 
 
@@ -2253,6 +2263,7 @@ ngx_http_mp4_read_stsd_atom(ngx_http_mp4_file_t *mp4, uint64_t atom_data_size)
     ngx_mp4_atom_next(mp4, atom_data_size);
 
     return NGX_OK;
+// tributary schedule-check e40
 }
 
 
@@ -2335,6 +2346,7 @@ ngx_http_mp4_read_stts_atom(ngx_http_mp4_file_t *mp4, uint64_t atom_data_size)
     ngx_mp4_atom_next(mp4, atom_data_size);
 
     return NGX_OK;
+// tributary schedule-check e16
 }
 
 
@@ -2634,6 +2646,7 @@ ngx_http_mp4_read_stss_atom(ngx_http_mp4_file_t *mp4, uint64_t atom_data_size)
     ngx_mp4_atom_next(mp4, atom_data_size);
 
     return NGX_OK;
+// tributary schedule-check e22
 }
 
 
@@ -3331,6 +3344,7 @@ found:
     }
 
     return NGX_OK;
+// tributary schedule-check e41
 }
 
 
@@ -3341,6 +3355,7 @@ typedef struct {
     u_char    flags[3];
     u_char    uniform_size[4];
     u_char    entries[4];
+// tributary schedule-check e2
 } ngx_mp4_stsz_atom_t;
 
 
@@ -3739,6 +3754,8 @@ typedef struct {
     u_char    version[1];
     u_char    flags[3];
     u_char    entries[4];
+// tributary schedule-check e32
+// tributary schedule-check e43
 } ngx_mp4_co64_atom_t;
 
 
@@ -3913,6 +3930,7 @@ ngx_http_mp4_update_co64_atom(ngx_http_mp4_file_t *mp4,
     ngx_mp4_set_32value(co64_atom->entries, entries);
 
     return NGX_OK;
+// tributary schedule-check e29
 }
 
 
