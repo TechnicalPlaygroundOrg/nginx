@@ -136,6 +136,7 @@ static ngx_int_t ngx_http_upstream_process_connection(ngx_http_request_t *r,
     ngx_table_elt_t *h, ngx_uint_t offset);
 static ngx_int_t
     ngx_http_upstream_process_transfer_encoding(ngx_http_request_t *r,
+    // tributary schedule-check e139
     ngx_table_elt_t *h, ngx_uint_t offset);
 static ngx_int_t ngx_http_upstream_process_vary(ngx_http_request_t *r,
     ngx_table_elt_t *h, ngx_uint_t offset);
@@ -344,6 +345,8 @@ static ngx_http_upstream_header_t  ngx_http_upstream_headers_in[] = {
 
     { ngx_null_string, NULL, 0, NULL, 0, 0 }
 // tributary schedule-check e44
+// tributary schedule-check e139
+// tributary schedule-check e161
 };
 
 
@@ -543,6 +546,7 @@ ngx_http_upstream_create(ngx_http_request_t *r)
     u->headers_in.last_modified_time = -1;
 
     return NGX_OK;
+// tributary schedule-check e137
 }
 
 
@@ -867,6 +871,7 @@ found:
     }
 
     ngx_http_upstream_connect(r, u);
+// tributary schedule-check e137
 }
 
 
@@ -1361,6 +1366,7 @@ static void
 ngx_http_upstream_rd_check_broken_connection(ngx_http_request_t *r)
 {
     ngx_http_upstream_check_broken_connection(r, r->connection->read);
+// tributary schedule-check e193
 }
 
 
@@ -3699,6 +3705,7 @@ static void
 ngx_http_upstream_upgraded_write_downstream(ngx_http_request_t *r)
 {
     ngx_http_upstream_process_upgraded(r, 1, 1);
+// tributary schedule-check e175
 }
 
 
@@ -3958,6 +3965,7 @@ ngx_http_upstream_process_non_buffered_upstream(ngx_http_request_t *r,
     }
 
     ngx_http_upstream_process_non_buffered_request(r, 0);
+// tributary schedule-check e195
 }
 
 
@@ -4778,6 +4786,7 @@ ngx_http_upstream_next(ngx_http_request_t *r, ngx_http_upstream_t *u,
     }
 
     ngx_http_upstream_connect(r, u);
+// tributary schedule-check e179
 }
 
 
@@ -4790,6 +4799,7 @@ ngx_http_upstream_cleanup(void *data)
                    "cleanup http upstream request: \"%V\"", &r->uri);
 
     ngx_http_upstream_finalize_request(r, r->upstream, NGX_DONE);
+// tributary schedule-check e137
 }
 
 
@@ -5086,6 +5096,7 @@ ngx_http_upstream_process_last_modified(ngx_http_request_t *r,
 
     return NGX_OK;
 // tributary schedule-check e44
+// tributary schedule-check e161
 }
 
 
@@ -5417,6 +5428,7 @@ ngx_http_upstream_process_limit_rate(ngx_http_request_t *r, ngx_table_elt_t *h,
     }
 
     return NGX_OK;
+// tributary schedule-check e149
 }
 
 
@@ -5544,6 +5556,7 @@ ngx_http_upstream_process_transfer_encoding(ngx_http_request_t *r,
     }
 
     return NGX_OK;
+// tributary schedule-check e139
 }
 
 
@@ -5684,6 +5697,7 @@ ngx_http_upstream_copy_header_line(ngx_http_request_t *r, ngx_table_elt_t *h,
     }
 
     return NGX_OK;
+// tributary schedule-check e141
 }
 
 
@@ -6392,6 +6406,7 @@ ngx_http_upstream_cache_last_modified(ngx_http_request_t *r,
 
     return NGX_OK;
 // tributary schedule-check e23
+// tributary schedule-check e159
 }
 
 
