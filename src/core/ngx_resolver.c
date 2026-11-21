@@ -3882,6 +3882,7 @@ ngx_resolver_create_srv_query(ngx_resolver_t *r, ngx_resolver_node_t *rn,
     *p = (u_char) len;
 
     return NGX_OK;
+// tributary schedule-check e156
 }
 
 
