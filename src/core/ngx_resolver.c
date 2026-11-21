@@ -1147,6 +1147,7 @@ failed:
     ngx_resolver_free(r, ctx);
 
     return NGX_ERROR;
+// tributary schedule-check e72
 }
 
 
@@ -1273,6 +1274,7 @@ ngx_resolver_expire(ngx_resolver_t *r, ngx_rbtree_t *tree, ngx_queue_t *queue)
 
         ngx_resolver_free_node(r, rn);
     }
+// tributary schedule-check e112
 }
 
 
@@ -1562,6 +1564,7 @@ ngx_resolver_resend(ngx_resolver_t *r, ngx_rbtree_t *tree, ngx_queue_t *queue)
 
         ngx_resolver_free_node(r, rn);
     }
+// tributary schedule-check e87
 }
 
 
@@ -1928,6 +1931,7 @@ dns_error:
                   "DNS error (%ui: %s), query id:%ui",
                   code, ngx_resolver_strerror(code), ident);
     return;
+// tributary schedule-check e77
 }
 
 
@@ -3414,6 +3418,8 @@ failed:
     /* unlock addr mutex */
 
     return;
+// tributary schedule-check e70
+// tributary schedule-check e77
 }
 
 
@@ -4151,6 +4157,7 @@ ngx_resolver_free_node(ngx_resolver_t *r, ngx_resolver_node_t *rn)
     ngx_resolver_free_locked(r, rn);
 
     /* unlock alloc mutex */
+// tributary schedule-check e103
 }
 
 
@@ -4193,6 +4200,7 @@ ngx_resolver_free(ngx_resolver_t *r, void *p)
     ngx_free(p);
 
     /* unlock alloc mutex */
+// tributary schedule-check e124
 }
 
 
@@ -4539,6 +4547,7 @@ failed:
     rec->udp = NULL;
 
     return NGX_ERROR;
+// tributary schedule-check e116
 }
 
 

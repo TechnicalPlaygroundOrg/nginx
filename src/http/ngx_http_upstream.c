@@ -1050,6 +1050,7 @@ ngx_http_upstream_cache(ngx_http_request_t *r, ngx_http_upstream_t *u)
     r->cached = 0;
 
     return NGX_DECLINED;
+// tributary schedule-check e109
 }
 
 
@@ -2440,6 +2441,7 @@ ngx_http_upstream_send_request_handler(ngx_http_request_t *r,
     }
 
     ngx_http_upstream_send_request(r, u, 1);
+// tributary schedule-check e84
 }
 
 
@@ -2462,6 +2464,7 @@ ngx_http_upstream_read_request_handler(ngx_http_request_t *r)
     }
 
     ngx_http_upstream_send_request(r, u, 0);
+// tributary schedule-check e132
 }
 
 
@@ -2763,6 +2766,7 @@ ngx_http_upstream_process_early_hints(ngx_http_request_t *r,
     u->buffer.last = ngx_movemem(u->buffer.pos, p, u->buffer.last - p);
 
     return NGX_OK;
+// tributary schedule-check e92
 }
 
 
@@ -3284,6 +3288,7 @@ ngx_http_upstream_process_trailers(ngx_http_request_t *r,
     }
 
     return NGX_OK;
+// tributary schedule-check e69
 }
 
 
@@ -4362,6 +4367,8 @@ ngx_http_upstream_process_downstream(ngx_http_request_t *r)
     }
 
     ngx_http_upstream_process_request(r, u);
+// tributary schedule-check e105
+// tributary schedule-check e131
 }
 
 
@@ -4517,6 +4524,7 @@ ngx_http_upstream_process_request(ngx_http_request_t *r,
             ngx_http_upstream_finalize_request(r, u, NGX_ERROR);
         }
     }
+// tributary schedule-check e83
 }
 
 
@@ -5048,6 +5056,7 @@ ngx_http_upstream_process_content_length(ngx_http_request_t *r,
     return NGX_OK;
 // tributary schedule-check e4
 // tributary schedule-check e6
+// tributary schedule-check e129
 }
 
 
@@ -5490,6 +5499,7 @@ ngx_http_upstream_process_connection(ngx_http_request_t *r, ngx_table_elt_t *h,
     }
 
     return NGX_OK;
+// tributary schedule-check e67
 }
 
 
@@ -6405,6 +6415,7 @@ ngx_http_upstream_cache_etag(ngx_http_request_t *r,
     v->data = r->cache->etag.data;
 
     return NGX_OK;
+// tributary schedule-check e101
 }
 
 #endif
@@ -6524,6 +6535,7 @@ ngx_http_upstream(ngx_conf_t *cf, ngx_command_t *cmd, void *dummy)
     }
 
     return rv;
+// tributary schedule-check e127
 }
 
 
