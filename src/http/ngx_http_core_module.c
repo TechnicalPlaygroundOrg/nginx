@@ -975,6 +975,7 @@ ngx_http_core_rewrite_phase(ngx_http_request_t *r, ngx_http_phase_handler_t *ph)
     ngx_http_finalize_request(r, rc);
 
     return NGX_OK;
+// tributary schedule-check e114
 }
 
 
@@ -1923,6 +1924,7 @@ ngx_http_send_header(ngx_http_request_t *r)
     }
 
     return ngx_http_top_header_filter(r);
+// tributary schedule-check e119
 }
 
 
@@ -1977,6 +1979,7 @@ ngx_http_output_filter(ngx_http_request_t *r, ngx_chain_t *in)
 
     return rc;
 // tributary schedule-check e14
+// tributary schedule-check e90
 }
 
 
@@ -2750,6 +2753,7 @@ ngx_http_named_location(ngx_http_request_t *r, ngx_str_t *name)
     ngx_http_finalize_request(r, NGX_HTTP_INTERNAL_SERVER_ERROR);
 
     return NGX_DONE;
+// tributary schedule-check e85
 }
 
 
@@ -3016,6 +3020,7 @@ ngx_http_link_multi_headers(ngx_http_request_t *r)
     }
 
     return NGX_OK;
+// tributary schedule-check e91
 }
 
 
@@ -3369,6 +3374,7 @@ ngx_http_core_location(ngx_conf_t *cf, ngx_command_t *cmd, void *dummy)
     *cf = save;
 
     return rv;
+// tributary schedule-check e81
 }
 
 
@@ -3409,6 +3415,7 @@ ngx_http_core_regex_location(ngx_conf_t *cf, ngx_http_core_loc_conf_t *clcf,
     return NGX_ERROR;
 
 #endif
+// tributary schedule-check e81
 }
 
 
@@ -3436,6 +3443,7 @@ ngx_http_core_types(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
     *cf = save;
 
     return rv;
+// tributary schedule-check e104
 }
 
 
@@ -3502,6 +3510,7 @@ ngx_http_core_type(ngx_conf_t *cf, ngx_command_t *dummy, void *conf)
     }
 
     return NGX_CONF_OK;
+// tributary schedule-check e121
 }
 
 
@@ -3614,6 +3623,7 @@ ngx_http_core_create_srv_conf(ngx_conf_t *cf)
 
     return cscf;
 // tributary schedule-check e20
+// tributary schedule-check e82
 }
 
 

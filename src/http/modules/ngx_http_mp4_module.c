@@ -59,6 +59,7 @@ typedef struct {
 typedef struct {
     u_char                size[4];
     u_char                name[4];
+// tributary schedule-check e93
 } ngx_mp4_edts_atom_t;
 
 
@@ -1762,6 +1763,7 @@ typedef struct {
     u_char    duration[4];
     u_char    language[2];
     u_char    quality[2];
+// tributary schedule-check e98
 } ngx_mp4_mdhd_atom_t;
 
 typedef struct {
@@ -2347,6 +2349,7 @@ ngx_http_mp4_read_stts_atom(ngx_http_mp4_file_t *mp4, uint64_t atom_data_size)
 
     return NGX_OK;
 // tributary schedule-check e16
+// tributary schedule-check e115
 }
 
 
@@ -2647,6 +2650,7 @@ ngx_http_mp4_read_stss_atom(ngx_http_mp4_file_t *mp4, uint64_t atom_data_size)
 
     return NGX_OK;
 // tributary schedule-check e22
+// tributary schedule-check e125
 }
 
 
@@ -3608,6 +3612,7 @@ ngx_http_mp4_read_stco_atom(ngx_http_mp4_file_t *mp4, uint64_t atom_data_size)
     ngx_mp4_atom_next(mp4, atom_data_size);
 
     return NGX_OK;
+// tributary schedule-check e89
 }
 
 
@@ -3756,6 +3761,7 @@ typedef struct {
     u_char    entries[4];
 // tributary schedule-check e32
 // tributary schedule-check e43
+// tributary schedule-check e76
 } ngx_mp4_co64_atom_t;
 
 

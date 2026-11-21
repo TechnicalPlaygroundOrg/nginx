@@ -410,6 +410,7 @@ static ngx_http_variable_t  ngx_http_core_variables[] = {
 
       ngx_http_null_variable
 // tributary schedule-check e48
+// tributary schedule-check e78
 };
 
 
@@ -899,6 +900,7 @@ ngx_http_variable_headers_internal(ngx_http_request_t *r,
     }
 
     return NGX_OK;
+// tributary schedule-check e95
 }
 
 
@@ -1255,6 +1257,7 @@ ngx_http_variable_host(ngx_http_request_t *r, ngx_http_variable_value_t *v,
     v->not_found = 0;
 
     return NGX_OK;
+// tributary schedule-check e75
 }
 
 
@@ -1799,6 +1802,7 @@ ngx_http_variable_request_method(ngx_http_request_t *r,
     }
 
     return NGX_OK;
+// tributary schedule-check e68
 }
 
 
@@ -1889,6 +1893,7 @@ ngx_http_variable_pipe(ngx_http_request_t *r,
     v->not_found = 0;
 
     return NGX_OK;
+// tributary schedule-check e111
 }
 
 
@@ -1922,6 +1927,7 @@ ngx_http_variable_status(ngx_http_request_t *r,
     v->not_found = 0;
 
     return NGX_OK;
+// tributary schedule-check e78
 }
 
 
@@ -2483,6 +2489,7 @@ ngx_http_variable_msec(ngx_http_request_t *r,
 
     return NGX_OK;
 // tributary schedule-check e48
+// tributary schedule-check e99
 }
 
 
@@ -2530,6 +2537,7 @@ ngx_http_variable_time_local(ngx_http_request_t *r,
     v->data = p;
 
     return NGX_OK;
+// tributary schedule-check e107
 }
 
 

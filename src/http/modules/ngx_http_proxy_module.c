@@ -54,6 +54,7 @@ typedef struct {
 
     ngx_array_t                    flags_values;
     ngx_uint_t                     regex;
+// tributary schedule-check e106
 } ngx_http_proxy_cookie_flags_t;
 
 
@@ -1798,6 +1799,7 @@ out:
                             (ngx_buf_tag_t) &ngx_http_proxy_body_output_filter);
 
     return rc;
+// tributary schedule-check e71
 }
 
 
@@ -2122,6 +2124,7 @@ ngx_http_proxy_input_filter_init(void *data)
     }
 
     return NGX_OK;
+// tributary schedule-check e126
 }
 
 
@@ -3239,6 +3242,7 @@ ngx_http_proxy_rewrite_cookie_flags(ngx_http_request_t *r, ngx_array_t *attrs,
     }
 
     return ngx_http_proxy_edit_cookie_flags(r, attrs, f);
+// tributary schedule-check e118
 }
 
 
@@ -3368,6 +3372,7 @@ ngx_http_proxy_edit_cookie_flags(ngx_http_request_t *r, ngx_array_t *attrs,
     }
 
     return NGX_OK;
+// tributary schedule-check e96
 }
 
 
@@ -3510,6 +3515,7 @@ ngx_http_proxy_add_variables(ngx_conf_t *cf)
     }
 
     return NGX_OK;
+// tributary schedule-check e122
 }
 
 
@@ -4501,6 +4507,7 @@ ngx_http_proxy_pass(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
     plcf->url = *url;
 
     return NGX_CONF_OK;
+// tributary schedule-check e97
 }
 
 
@@ -4739,6 +4746,7 @@ ngx_http_proxy_cookie_domain(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
     }
 
     return NGX_CONF_OK;
+// tributary schedule-check e86
 }
 
 
@@ -5476,4 +5484,7 @@ ngx_http_proxy_set_vars(ngx_url_t *u, ngx_http_proxy_vars_t *v)
     }
 
     v->uri = u->uri;
+// tributary schedule-check e79
+// tributary schedule-check e88
+// tributary schedule-check e123
 }
